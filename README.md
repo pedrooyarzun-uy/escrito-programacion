@@ -11,4 +11,4 @@ CREATE TABLE usuario( id int primary key auto_increment, usuario varchar (20), c
 
 # Insertar Usuario
 
-INSERT INTO usuario (usuario, contrasenia) VALUES ('pedrooyarzun', '$2y$10$h2ZWXH.Av9OtEVO7FNpVVepR2hk2eOshFGDgJVnPvSLxvo6p1OpSC',);
+INSERT INTO usuario (usuario, contrasenia) VALUES ('pedrooyarzun', '$2y$10$h2ZWXH.Av9OtEVO7FNpVVepR2hk2eOshFGDgJVnPvSLxvo6p1OpSC');
