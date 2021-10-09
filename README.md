@@ -9,6 +9,9 @@ CREATE TABLE compra( id int primary key auto_increment, nombre varchar (20), can
 
 CREATE TABLE usuario( id int primary key auto_increment, usuario varchar (20), contrasenia varchar(255) );
 
-# Insertar Usuario
+# Insertar Usuario y su contraseña
 
 INSERT INTO usuario (usuario, contrasenia) VALUES ('pedrooyarzun', '$2y$10$h2ZWXH.Av9OtEVO7FNpVVepR2hk2eOshFGDgJVnPvSLxvo6p1OpSC');
+
+Usuario: pedrooyarzun
+Contraseña: profe123
