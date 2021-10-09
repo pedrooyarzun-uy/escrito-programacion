@@ -34,7 +34,4 @@
             $this -> nombreDb = NOMBRE_DB;
         }
 
-        protected function hashearContrasenia($contrasenia){
-            return password_hash($contrasenia, PASSWORD_DEFAULT);
-        }
     }
