@@ -1,3 +1,13 @@
+<?php 
+    require '../utils/autoloader.php';
+
+    if(!isset($_SESSION['autenticado'])){
+        header('Location: /');
+        die();
+    } 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +34,21 @@
             El souvenir no se pudo guardar!
         </div>
     <?php endif; ?>
-
-
-    <form action="/registrarSouvenir" method="POST">
-        <input type="text" name="nombre" placeholder="Ingrese un nombre" maxlength="50"> <br>
-        <textarea name="descripcion" id="" cols="30" rows="10" placeholder="Ingrese una descripcion" maxlength="255"></textarea> <br>
-        <input type="text" name="stock" placeholder="Ingrese cantidad de stock"> <br>
-        <input type="text" name="precio" placeholder="Ingrese un precio"> <br>
-        <button>Guardar Souvenir</button>
-    </form>
+        <h1 class="text-center mt-2">Registrar Souvenir</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="/registrarSouvenir" method="POST">
+                        <input type="text" name="nombre" placeholder="Ingrese un nombre" maxlength="50" class="form-control"> <br>
+                        <textarea name="descripcion" id="" cols="30" rows="10" placeholder="Ingrese una descripcion" maxlength="255" class="form-control"></textarea> <br>
+                        <input type="text" name="stock" placeholder="Ingrese cantidad de stock" class="form-control"> <br>
+                        <input type="text" name="precio" placeholder="Ingrese un precio" class="form-control"> <br>
+                        <button class="btn btn-success">Guardar Souvenir</button>
+                        <button formaction="/principal" class="btn btn-primary">Volver al inicio</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
 </body>
 </html>

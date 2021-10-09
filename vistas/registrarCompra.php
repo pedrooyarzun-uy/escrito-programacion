@@ -1,3 +1,13 @@
+<?php 
+    require '../utils/autoloader.php';
+
+    if(!isset($_SESSION['autenticado'])){
+        header('Location: /');
+        die();
+    } 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +46,7 @@
                     echo "<button class='btn btn-danger' name='id' formaction='/guardar-compra' value='".$souvenir['id']."'>  Guardar Souvenir  </button>";
                 }
         ?>
-        
+        <button formaction="/principal" class="btn btn-primary">Volver al inicio</button>
     </form>
 
     

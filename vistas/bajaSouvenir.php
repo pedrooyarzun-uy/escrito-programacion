@@ -1,3 +1,12 @@
+<?php 
+    require '../utils/autoloader.php';
+
+    if(!isset($_SESSION['autenticado'])){
+        header('Location: /');
+        die();
+    } 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +22,18 @@
     <title>Eliminar Souvenir</title>
 </head>
 <body>
+
+    <?php if(isset($parametros['exito']) && $parametros['exito'] == true): ?>
+        <div class="alert alert-success">
+            El souvenir fue eliminado exitosamente!
+        </div>
+    <?php endif; ?>
+
+    <?php if(isset($parametros['exito']) && $parametros['exito'] == false): ?>
+        <div class="alert alert-danger">
+            El souvenir no se pudo eliminar
+        </div>
+    <?php endif; ?>
     <h1 class="text-center">Eliminar Souvenir</h1>
 
     <table class="table table-striped">
