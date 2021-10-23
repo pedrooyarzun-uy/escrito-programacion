@@ -48,7 +48,6 @@
             $this -> usuario = $resultado ['usuario'];
             $this -> contrasenia  = $resultado['contrasenia'];
         }
-        asdkjasdj;sdhfjd:
     }
     
 
