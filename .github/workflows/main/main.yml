@@ -1,0 +1,19 @@
+name: EjemploActions
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+
+  EscriHola:
+    runs-on: [self-hosted]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Escribimos Hola
+        run: echo "Hola"
+
