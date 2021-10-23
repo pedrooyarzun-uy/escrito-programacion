@@ -1,4 +1,4 @@
-name: EjemploActions
+name: localhost
 
 on:
   push:
